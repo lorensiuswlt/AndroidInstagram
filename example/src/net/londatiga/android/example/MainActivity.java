@@ -1,34 +1,29 @@
 package net.londatiga.android.example;
 
 import java.net.URL;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import net.londatiga.android.instagram.Instagram;
+import net.londatiga.android.instagram.InstagramRequest;
+import net.londatiga.android.instagram.InstagramSession;
+import net.londatiga.android.instagram.InstagramUser;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
-import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-
-import android.os.AsyncTask;
-import android.os.Bundle;
-
-import android.util.DisplayMetrics;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -36,7 +31,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import net.londatiga.android.instagram.*;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 /**
  * Instagram authentication.
@@ -137,6 +136,12 @@ public class MainActivity extends Activity {
 		@Override
 		public void onError(String error) {		
 			showToast(error);
+		}
+
+		@Override
+		public void onCancel() {
+			showToast("OK. Maybe later?");
+			
 		}
 	};
 			
