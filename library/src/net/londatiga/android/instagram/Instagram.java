@@ -63,6 +63,12 @@ public class Instagram {
 			public void onError(String error) {
 				mListener.onError(error);
 			}
+
+			@Override
+			public void onCancel() {
+			mListener.onCancel();
+				
+			}
 		});
 	}
 	
@@ -179,5 +185,6 @@ public class Instagram {
 	public interface InstagramAuthListener {
 		public abstract void onSuccess(InstagramUser user);
 		public abstract void onError(String error);
+		public abstract void onCancel();
 	}
 }

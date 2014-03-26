@@ -151,6 +151,12 @@ public class InstagramDialog extends Dialog {
 		mWebView.clearFormData();
 	}
 	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		mListener.onCancel();
+		
+	}
 	private class InstagramWebViewClient extends WebViewClient {
 
 		@Override
@@ -212,6 +218,7 @@ public class InstagramDialog extends Dialog {
 	
 	public interface InstagramDialogListener {
 		public abstract void onSuccess(String code);
+		public abstract void onCancel();
 		public abstract void onError(String error);
 	}
 }
