@@ -41,7 +41,7 @@ public class Instagram {
 	 * @param clientSecret Client secret
 	 * @param redirectUri Redirect uri
 	 */
-	public Instagram(Context context, String clientId, String clientSecret, String redirectUri) {
+	public Instagram(Context context, String clientId, String clientSecret, String redirectUri, String scope) {
 		mContext		= context;
 		
 		mClientId		= clientId;
@@ -49,6 +49,9 @@ public class Instagram {
 		mRedirectUri	= redirectUri;
 		
 		String authUrl	= Cons.AUTH_URL + "client_id=" + mClientId + "&redirect_uri=" + mRedirectUri + "&response_type=code";
+		if (scope != null) {
+			authUrl += "&scope=" + scope;
+		}
 		
 		mSession		= new InstagramSession(context);
 		
