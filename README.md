@@ -7,6 +7,27 @@ If you are using AndroidInstagram in your app and would like to be listed here, 
 
 Also, you can follow me on Twitter : [@lorensiuswlt][1] or visit my blog [www.londatiga.net][2]
 
+<div style="margin: 25px;">
+<a href="https://rapidapi.com/package/Instagram/functions?utm_source=InstagramGitHub-Android&utm_medium=button&utm_content=Vendor_GitHub" style="
+    all: initial;
+    background-color: #498FE1;
+    border-width: 0;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 12pt;
+    background-image: url(https://scdn.rapidapi.com/logo-small.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+    padding-left: 44px;
+    cursor: pointer;">
+  Run now on <b>RapidAPI</b>
+</a>
+</div>
+
 Setup
 -----
 * In Eclipse, just import the library as an Android library project. Project > Clean to generate the binaries 
